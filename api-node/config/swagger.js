@@ -15,22 +15,8 @@ const options = {
         url: "http://localhost:3001", // URL base de la API
       },
     ],
-    components: {
-      securitySchemes: {
-        BearerAuth: {
-          type: "http",
-          scheme: "bearer",
-          bearerFormat: "JWT", 
-        },
-      },
-    },
-    security: [
-      {
-        BearerAuth: [], 
-      },
-    ],
   },
-  apis: ["./routes/*.js"], 
+  apis: ["./routes/*.js"], // Rutas donde se documentarán los endpoints
 };
 
 const swaggerSpec = swaggerJSDoc(options);
